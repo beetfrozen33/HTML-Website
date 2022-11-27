@@ -1,61 +1,105 @@
 body {
     font-family: "Trebuchet MS";
 }
-.menu {
-    display: flex;                  /* affichage en flexbox */
-    padding:0;                      /* Pas de marges internes */
-    background-color: #ccc;         /* couleur d'arrière-plan */
-    justify-content: space-around;  /* Alignements entre les liens du menu */
+
+nav 
+{
+    margin: 10px auto;
+    width: 100%;
+    height: 75px;
+    background: #FF0000;
 }
-.menu li {
-    list-style-type: none ;         /* Enlever les puces pour les éléments du menu */
-  
+ 
+nav .main_pages 
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100;
 }
-.menu a {
-    display:block;                  /* affichage en bloc */
-    min-width: 120px;               /* Largeur minimale des liens */   
-    
-    margin: 0.5rem;                 /* Marges externes */
-    padding: 0.4rem 0;              /* Marges internes */
-    text-align: center;             /* Centrer le texte */   
-    background-color: #1a94bc;      /* Couleur de l'arrière-plan */
-    color: #fff;                    /* Couleur du texte */
-    text-decoration: none;          /* Enelever le soulignement */
-    border: 1px solid #fff;         /* Mettre une bordure */
-    border-radius: 4px;             /* bordures arrondis */
-    
-    transition: all 1s ;            /* Effets de transition pendant 1 seconde */
+ 
+nav .main_pages a 
+{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
 }
-.menu a.actif {                     /* Style pour la page web active, un bleu foncé et une bordure de bouton en noir */
-    background-color: #004c8a ;     
-    color: #ffffff ;
-    border-color: #000000 ;
-}
-.menu a:hover,
-.menu a:hover.actif{
-    background-color: #004c8a ;
-    color: #ffffff ;                /* Couleur du texte */
-    border-color: #000000 ;         /* Couleur de l'arrière-plan */
+ 
+nav a:hover 
+{
+    background: #D30000
 }
 
-h1 {
-    width: 1000px;                  /* largeur à 1000px */
+label, #toggle
+{
+    display: none;
+}
+ 
+@media all and (max-width: 991px)
+{
+    nav
+    {
+        height: 60px;
+    }
+ 
+     nav .main_pages 
+    {
+        display: none;
+        flex-direction: column;
+        background: #48435C;
+        height: 220px;
+    }
+ 
+    nav .main_pages a {
+        width: 50%;
+    }
+ 
+    label 
+    {
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+    }
+
+    #toggle:checked + .main_pages {
+        display: flex;
+    }
+}
+
+h1 {                 
     margin: 0 auto;
     background: white;
     text-align: center;
 }
 
-img {                               /* Emplacement de l'image en bas à gauche */
-  width: 150px;
-  position: absolute;
-  top: 95%;
-  left: 95.5%;
-  transform: translate(-50%, -50%);
-}
-
-p {                                 /* Alignement des paragraphes au milieu sur fond bland sans marge avec une largeur de 1000px */
+p {                                 
     width: 1000px;
     margin: 0 auto;
     background: white;
     text-align: center;
 }
+
+footer
+{
+    text-align:center;
+    position: fixed;
+    bottom:0;
+    width:100%;
+    display:inline-block;
+    vertical-align:top;
+    font-size:14px;
+    font-weight: bold;
+}
+
