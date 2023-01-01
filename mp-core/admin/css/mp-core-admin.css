@@ -1,0 +1,70 @@
+/**
+ * Wp Admin Css
+ */
+
+.company-importar-page .display-none {
+  display: none !important;
+}
+
+.company-importar-page {
+  padding: 20px 0px;
+}
+
+.company-importar-page ul.created-companies-list {
+  margin-bottom: 60px;
+  padding-left: 20px;
+}
+
+.company-importar-page ul.companies-import-fields {
+  padding-left: 30px;
+}
+
+.company-importar-page ul {
+  list-style: disc;
+}
+
+.company-importar-page button {
+  padding: 8px 12px;
+  background: #007cba;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: none;
+  outline: 1px solid transparent;
+  border: 1px solid #007cba;
+  border-radius: 2px;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.company-importar-page button:hover {
+  background: #006ba1;
+}
+
+.loader-container {
+  display: flex;
+}
+
+.loader-container .loader {
+  margin-left: 20px;
+  margin-top: -5px;
+}
+
+/* Loader */
+.company-importar-page .loader {
+  border: 7px solid #9ca2a7;
+  border-top: 7px solid #007cba;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
